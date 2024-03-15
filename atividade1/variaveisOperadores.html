@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Calculadora Simples</h2>
+    <label for="numA1">Número A:</label>
+    <input type="number" id="numA1">
+    <label for="numB1">Número B:</label>
+    <input type="number" id="numB1">
+    <button onclick="soma()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <div id="output"></div>
+</div>
+
+<script>
+    function soma() {
+        let numA = parseInt(document.getElementById('numA1').value);
+        let numB = parseInt(document.getElementById('numB1').value);
+        let resultado = numA + numB;
+        document.getElementById('output').innerText = `Resultado da soma entre ${numA} e ${numB}: ${resultado}`;
+    }
+
+    function subtrair() {
+        let numA = parseInt(document.getElementById('numA1').value);
+        let numB = parseInt(document.getElementById('numB1').value);
+        let resultado = numA - numB;
+        document.getElementById('output').innerText = `Resultado da subtração entre ${numA} e ${numB}: ${resultado}`;
+    }
+</script>
+
+</body>
+</html>
